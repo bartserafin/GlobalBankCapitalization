@@ -5,9 +5,9 @@ import csv
 from scrapper import scrap_data
 from plotter import plot_graphs
 
-original_file = "original_data.csv"     # file used to store all extracted data
-log_file = "logfile.txt"                # all event logs will be stored in this file
-target_file = "transformed_data.csv"    # file where transformed data is stored
+original_file = "original_data.csv"  # file used to store all extracted data
+log_file = "logfile.txt"  # all event logs will be stored in this file
+target_file = "transformed_data.csv"  # file where transformed data is stored
 
 
 # ----- EXTRACT DATA ----- #
@@ -28,7 +28,7 @@ def extract():
     # process json file
     for jsonfile in glob.glob("*.json"):
         extracted_data = extract_from_json(jsonfile)
-    
+
     extracted_data.to_csv(original_file)
 
     return extracted_data
@@ -80,11 +80,9 @@ data = scrap_data()
 extracted_data = extract()
 log("Extract phase Ended")
 
-
 log("Transform phase Started")
 transformed_data = transform(extracted_data)
 log("Transform phase Ended")
-
 
 log("Load phase Started")
 load(target_file, transformed_data)
@@ -92,8 +90,5 @@ log("Load phase Ended")
 
 log("ETL Job Ended")
 
-
 # ----- PLOTTER ----- #
 plot_graphs(target_file)
-
-

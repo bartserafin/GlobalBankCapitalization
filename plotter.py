@@ -54,7 +54,7 @@ def plot_pie_chart(data):
     # plot pie chart
     fig1, ax1 = plt.subplots()
     ax1.set_title('Country % Global Market Capitalization')
-    ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=30)
+    ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=40)
     ax1.axis('equal')
     plt.show()
 
