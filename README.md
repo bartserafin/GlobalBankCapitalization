@@ -1,34 +1,39 @@
 # GlobalBankCapitalization
-<!-- ABOUT THE PROJECT -->
+
+
 ## About The Project
 This a practice project serving as an intoduction to ETL process. 
 
+
 Objectives:
-* Gather data from wiki page about global market capitalization
-* Gather data about the currency exchange rates
-* Save data to csv format
-* Perform ETL process
-* Format data as to show market values converted to a chosen currency
+* Gather data from wiki page table https://en.wikipedia.org/wiki/List_of_largest_banks about global market capitalization
+* Save data to JSON format
+* Format data as to show market values converted to a chosen currency using exchange_rates.csv file
 * Present finding in a chart format
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
-### Installation
+### Getting Started
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/bartserafin/GlobalBankCapitalization.git
+   ```
+2. Install required libraries
+   ```sh
+   pip install pandas
+   ```
+   ```sh
+   pip install matplotlib
+   ```
+   
+   ```sh
+   pip install BeautifulSoup4
+   ```
+   ```sh
+   pip install requests
    ```
 
 
-<!-- USAGE EXAMPLES -->
 ## Example Results
-
 Graph
