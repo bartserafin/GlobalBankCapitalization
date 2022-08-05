@@ -1,9 +1,9 @@
 # GlobalBankCapitalization
-Practice project for web scrapping and ETL
+This a practice project serving as an intoduction to ETL and webscrapping.
 
 
 ## About The Project
-This a practice project serving as an intoduction to ETL process. 
+
 
 
 Objectives:
