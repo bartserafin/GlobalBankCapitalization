@@ -1,4 +1,5 @@
 # GlobalBankCapitalization
+Practice project for web scrapping and ETL
 
 
 ## About The Project
