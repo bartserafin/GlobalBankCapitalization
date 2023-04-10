@@ -38,16 +38,18 @@ def extract():
 def transform(data):
     # Convert currency using exchange_rate.csv
     # Access USD to EUR exchange rate
-    with open('exchange_rates.csv', 'r') as file:
+    with open('GlobalBankCapitalization\exchange_rates.csv', 'r') as file:
         content = csv.reader(file)
         for row in content:
             if row[0] == 'EUR':
                 exchange_rate = float(row[1])
+                print(exchange_rate)
                 break
 
         # Convert currency from USD to EUR for all banks in Data
         market_cap_euro_lst = []
-        for row in data['Market Cap (US$ Billion)'].astype(float):
+        for row in data['Market Cap (US$ Billion)']:
+            row = float(row.replace(',',''))
             market_cap_euro = round(row * exchange_rate, 2)
             market_cap_euro_lst.append(market_cap_euro)
 

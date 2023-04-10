@@ -24,7 +24,7 @@ def scrap_data():
     market_cap_lst = []
 
     # From scrapped website, find required info
-    for row in soup.find_all('tbody')[3].find_all('tr'):
+    for row in soup.find_all('tbody')[0].find_all('tr'):
         col = row.find_all('td')
         if not col:
             continue

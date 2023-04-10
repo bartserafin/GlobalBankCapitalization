@@ -7,7 +7,7 @@ def format_data(file):
     sorted_df = df.sort_values(by=['Market Cap (EUR€ Billion)'], ascending=True)
     sorted_df = sorted_df.drop('Unnamed: 0', axis=1)
     # print(sorted_df)
-    plot_banks_capitalization(sorted_df)
+    # plot_banks_capitalization(sorted_df)
     plot_pie_chart(sorted_df)
 
 
@@ -54,7 +54,7 @@ def plot_pie_chart(data):
     # plot pie chart
     fig1, ax1 = plt.subplots()
     ax1.set_title('Country % Global Market Capitalization')
-    ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=40)
+    ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=40 , labeldistance=1.1, pctdistance=0.7)
     ax1.axis('equal')
     plt.show()
 
